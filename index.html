@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Da Maven Wealth Management Consultancy">
+<meta property="og:description" content="Protection planning, will writing and financial planning for individuals, families and businesses in Malaysia.">
+<meta property="og:image" content="images/ent.png">
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Da Maven Wealth</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Da Maven Wealth Management Consultancy — protection planning, will writing, financial planning and policy servicing for individuals, families and companies in Malaysia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: founder profile hero, services, policy care, client proof, one enquiry desk that hands off to WhatsApp */
+/* Palette: deep navy for key bands, warm ivory + white for reading, soft blue-grey for secondary bands, champagne gold used sparingly */
+:root {
+  --navy: #10263A;
+  --charcoal: #293746;
+  --gold: #D5AC62;
+  --ivory: #F5F3EF;
+  --bluegrey: #DCE3E9;
+  --bg: #F5F3EF;
+  --panel: #FFFFFF;
+  --panel-2: #ECE8E1;
+  --line: #DED8CE;
+  --fg: #10263A;
+  --muted: #4B5967;
+  --brass: #8C6726;          /* gold deepened for text on light grounds */
+  --brass-soft: rgba(213,172,98,.16);
+  --on-brass: #FFFFFF;
+  --ok: #2E7D57;
+  --danger: #B3412E;
+  --display: "Gloock", "Noto Sans SC", Georgia, "Times New Roman", serif;
+  --body: "Manrope", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --radius: 14px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
+
+#app[data-lang="en"] .zh, #app[data-lang="zh"] .en { display: none !important; }
+#app[data-lang="zh"] { --display: "Noto Sans SC", "Gloock", serif; }
+
+.wrap { max-width: 1140px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+section { padding-block: clamp(64px, 9vw, 112px); }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); display: flex; align-items: center; gap: 12px; }
+.eyebrow::before { content: ""; width: 32px; height: 1px; background: currentColor; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.1; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(32px, 4.6vw, 50px); }
+h3 { font-size: 22px; }
+#app[data-lang="zh"] h1, #app[data-lang="zh"] h2, #app[data-lang="zh"] h3 { font-weight: 700; letter-spacing: .02em; }
+p { margin: 0; }
+.lead { color: var(--muted); font-size: 18px; max-width: 60ch; }
+
+/* placeholder marker — anything in this style still needs your real details */
+.ph { background: var(--brass-soft); border-bottom: 1px dashed var(--brass); padding: 0 4px; border-radius: 3px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font: 600 15px/1 var(--body); padding: 15px 22px; border-radius: 999px; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .15s ease, background .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn-brass { background: linear-gradient(135deg, #E2BF7E, var(--gold) 55%, #C79A4C); color: var(--navy); box-shadow: 0 8px 20px -10px rgba(140,103,38,.6); }
+.btn-line { border-color: var(--line); color: var(--fg); background: transparent; }
+.btn-line:hover { border-color: var(--brass); }
+.wa-ico { width: 18px; height: 18px; flex: none; }
+
+/* nav */
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; gap: 20px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+.mark { width: 38px; height: 38px; border: 1px solid var(--brass); border-radius: 50%; display: grid; place-items: center; font-family: "Gloock", serif; color: var(--brass); font-size: 16px; }
+/* logo file has the DD monogram on top and the wordmark below; the header shows only the monogram */
+.logo-mark { width: 40px; height: 42px; flex: none; background: url("data:image/png;base64,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") no-repeat 50% -3px / 62px auto; mix-blend-mode: multiply; }
+.foot-logo { display: block; height: 72px; width: auto; filter: invert(1); mix-blend-mode: screen; opacity: .92; }
+.brand b { font-family: "Gloock", serif; font-weight: 400; font-size: 19px; letter-spacing: .01em; display: block; line-height: 1.1; }
+.brand small { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+.nav-links { display: flex; gap: 24px; font-size: 14px; }
+.nav-links a { text-decoration: none; color: var(--muted); white-space: nowrap; }
+.lang button, .nav .btn { white-space: nowrap; }
+.nav-links a:hover { color: var(--fg); }
+.lang { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.lang button { background: none; border: 0; color: var(--muted); font: 600 12px/1 var(--body); padding: 7px 10px; border-radius: 999px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--panel-2); color: var(--fg); }
+.nav .btn { padding: 11px 16px; font-size: 14px; }
+@media (max-width: 900px) { .nav-links { display: none; } }
+@media (max-width: 480px) { .nav .btn span { display: none; } .brand small { display: none; } }
+
+/* hero */
+.hero { padding-block: clamp(40px, 6vw, 80px) clamp(64px, 8vw, 100px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.portrait { position: relative; aspect-ratio: 4 / 5; max-width: 100%; border-radius: var(--radius); background:
+  radial-gradient(120% 80% at 30% 10%, var(--panel-2), var(--panel)); border: 1px solid var(--line); overflow: hidden; display: grid; place-items: center; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.portrait .initials { font-family: "Gloock", serif; font-size: clamp(80px, 12vw, 140px); color: var(--brass); opacity: .5; }
+/* square studio photo with wide margins: zoom in so the portrait fills the 4:5 frame */
+img.crop-ent { width: 100%; height: 100%; object-fit: cover; transform: scale(1.3); transform-origin: 68% 13%; }
+.member:hover .member-img img.crop-ent { transform: scale(1.36); }
+.portrait .tag.tag { z-index: 1; background: linear-gradient(transparent, rgba(8,18,20,.85) 45%); color: #E6E1D6; left: 0; right: 0; bottom: 0; padding-inline: 16px; padding-block: 32px 16px; border-top: 0; }
+.portrait .tag { position: absolute; left: 16px; bottom: 16px; right: 16px; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+.hero h1 { font-size: clamp(44px, 7vw, 82px); margin-block: 18px 10px; }
+.roles { font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--brass); display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.roles span + span::before { content: "·"; margin-right: 14px; color: var(--muted); }
+.hero .lead { margin-block: 22px 28px; }
+.quote { font-family: var(--display); font-size: clamp(20px, 2.4vw, 26px); border-left: 2px solid var(--brass); padding-left: 18px; margin-bottom: 30px; max-width: 34ch; }
+.quote { max-width: 44ch; display: grid; gap: 8px; }
+.quote .quote-sub { font-family: var(--body); font-size: 15px; line-height: 1.6; color: var(--muted); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.creds { margin-top: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; padding-top: 26px; border-top: 1px solid var(--line); }
+.creds div { min-width: 0; }
+.creds dt { font-weight: 700; font-size: 15px; }
+.creds dd { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+.hero h1 .aka { color: var(--muted); font-size: .5em; letter-spacing: .01em; }
+.awards { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.awards li { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); border-radius: 999px; padding: 6px 12px; background: var(--brass-soft); }
+.break { overflow-wrap: anywhere; }
+@media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; } .portrait { max-width: 420px; } }
+@media (max-width: 480px) { .creds { grid-template-columns: 1fr; } }
+
+/* stats strip */
+.stats { border-block: 1px solid var(--line); background: var(--panel); }
+.stats .wrap { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+.stat { padding-block: 28px; padding-inline: 20px; border-left: 1px solid var(--line); }
+.stat:first-child { border-left: 0; padding-left: 0; }
+.stat b { font-family: "Gloock", serif; font-weight: 400; font-size: clamp(30px, 4vw, 44px); color: var(--brass); display: block; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: 14px; }
+@media (max-width: 720px) { .stats .wrap { grid-template-columns: repeat(2, minmax(0,1fr)); } .stat:nth-child(3) { border-left: 0; padding-left: 0; } .stat:nth-child(n+3) { border-top: 1px solid var(--line); } }
+
+/* section heads */
+.head { display: grid; gap: 16px; margin-bottom: 44px; max-width: 760px; }
+
+/* services ledger */
+.ledger { border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) auto; gap: 24px 40px; padding-block: 30px; border-bottom: 1px solid var(--line); align-items: start; }
+.row .who { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin-bottom: 8px; display: block; }
+.row ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.row li { font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; color: var(--muted); }
+.row p { color: var(--muted); margin-bottom: 14px; }
+.row .btn { padding: 11px 16px; font-size: 14px; white-space: nowrap; }
+@media (max-width: 860px) { .row { grid-template-columns: 1fr; gap: 12px; } }
+
+.note { margin-top: 28px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; align-items: start; color: var(--muted); font-size: 15px; }
+.note strong { color: var(--fg); }
+.note .i { font-family: "Gloock", serif; color: var(--brass); font-size: 28px; line-height: 1; }
+
+/* claims */
+.claims { background: var(--panel); border-block: 1px solid var(--line); }
+.claims-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 72px); }
+.pain { display: grid; gap: 10px; margin-top: 28px; }
+.pain div { padding: 14px 18px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); font-size: 15px; }
+.steps { display: grid; gap: 0; counter-reset: s; }
+.step { display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 18px; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.step:first-child { padding-top: 0; }
+.step::before { counter-increment: s; content: "0" counter(s); font-family: var(--mono); color: var(--brass); font-size: 14px; padding-top: 4px; }
+.step h3 { font-size: 21px; margin-bottom: 6px; }
+.step p { color: var(--muted); font-size: 15px; }
+.docs { margin-top: 24px; font-size: 14px; color: var(--muted); }
+.docs b { color: var(--fg); display: block; margin-bottom: 8px; font-size: 14px; }
+.docs ul { margin: 0; padding-left: 18px; columns: 2; column-gap: 24px; }
+@media (max-width: 860px) { .claims-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .docs ul { columns: 1; } }
+
+/* client stories */
+.stories { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.story { margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); min-width: 0; }
+.story blockquote { margin: 0; font-family: var(--display); font-size: 19px; line-height: 1.45; }
+.story blockquote::before { content: "“"; display: block; font-family: "Gloock", serif; font-size: 48px; line-height: .8; color: var(--brass); margin-bottom: 8px; }
+.story figcaption { display: flex; align-items: center; gap: 12px; }
+.story figcaption > span:last-child { display: grid; }
+.story small { color: var(--muted); font-size: 13px; }
+.avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--panel-2); border: 1px solid var(--line); flex: none; }
+@media (max-width: 860px) { .stories { grid-template-columns: 1fr; } }
+
+/* team */
+.team { background: var(--panel); border-block: 1px solid var(--line); }
+.team .growth-head { margin-bottom: 36px; }
+.team .growth-head em { font-style: italic; color: var(--brass); }
+.members { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+.member { margin: 0; min-width: 0; border-radius: var(--radius); overflow: hidden; background: var(--bg); border: 1px solid var(--line); }
+.member.lead { border-color: var(--brass); }
+.member-img { aspect-ratio: 4 / 5; max-width: 100%; overflow: hidden; background: #E9ECEE; }
+.member-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform .4s ease; }
+.member:hover .member-img img { transform: scale(1.03); }
+.member-img.empty { display: grid; place-items: center; background: radial-gradient(120% 80% at 30% 10%, var(--panel-2), var(--panel)); }
+.member-img .initials { font-family: "Gloock", serif; font-size: 48px; color: var(--brass); opacity: .55; }
+.member figcaption { padding: 18px 18px 20px; display: grid; gap: 2px; }
+.member .role { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin-bottom: 6px; }
+.member b { font-family: "Gloock", serif; font-weight: 400; font-size: 22px; line-height: 1.2; }
+.member small { color: var(--muted); font-size: 14px; font-style: italic; }
+@media (max-width: 900px) { .members { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 400px) { .member b { font-size: 19px; } }
+.wins { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+.win { margin: 0; min-width: 0; border-radius: var(--radius); overflow: hidden; background: var(--bg); border: 1px solid var(--line); }
+.win-img { aspect-ratio: 4 / 5; max-width: 100%; overflow: hidden; background: var(--panel-2); }
+.win-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.win:hover .win-img img { transform: scale(1.03); }
+.win figcaption { padding: 20px 22px 24px; display: grid; gap: 4px; }
+.win .role { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin-bottom: 6px; }
+.win b { font-family: "Gloock", serif; font-weight: 400; font-size: 26px; line-height: 1.2; }
+.win .aka-s { color: var(--muted); font-size: .7em; }
+.win small { color: var(--muted); font-size: 14px; }
+@media (max-width: 600px) { .wins { grid-template-columns: 1fr; } }
+
+/* client screenshots */
+.shots { columns: 3 260px; column-gap: 16px; }
+.shot { break-inside: avoid; margin: 0 0 16px; position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--panel); }
+.shot img { display: block; width: 100%; height: auto; }
+.shot-tag { position: absolute; top: 12px; left: 12px; z-index: 1; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; background: var(--brass); color: var(--on-brass); padding: 6px 10px; border-radius: 999px; }
+.speed { margin-top: 48px; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 3fr) minmax(0, 3fr); gap: 20px; align-items: start; padding: clamp(20px, 3vw, 32px); border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
+.speed-copy { display: grid; gap: 12px; min-width: 0; }
+.speed-copy h3 { font-size: clamp(24px, 3vw, 32px); }
+.speed-copy > p { color: var(--muted); font-size: 15px; }
+.speed-copy .speed-note { font-size: 13px; border-left: 2px solid var(--brass); padding-left: 12px; }
+.claim-shot { margin: 0; min-width: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--bg); }
+.claim-shot img { display: block; width: 100%; height: auto; }
+.claim-shot figcaption { padding: 14px 16px; display: grid; gap: 2px; }
+.claim-shot b { font-family: "Gloock", serif; font-weight: 400; font-size: 28px; color: var(--brass); line-height: 1.1; }
+.claim-shot figcaption > span { color: var(--muted); font-size: 13px; }
+@media (max-width: 900px) { .speed { grid-template-columns: repeat(2, minmax(0,1fr)); } .speed-copy { grid-column: 1 / -1; } }
+
+/* experience you can count on */
+.proof { padding-block: clamp(48px, 7vw, 80px); background: var(--panel); border-block: 1px solid var(--line); }
+.proof-head { text-align: center; display: grid; gap: 10px; justify-items: center; margin-bottom: 36px; }
+.proof-head h2 { font-size: clamp(28px, 4vw, 42px); }
+.proof-head p { color: var(--muted); max-width: 52ch; }
+.proof-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; }
+.proof-item { display: grid; align-content: start; gap: 6px; padding: 26px 24px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); border-top: 3px solid var(--brass); min-width: 0; }
+.proof-item b { font-family: var(--display); font-weight: 400; font-size: clamp(34px, 4vw, 46px); line-height: 1.05; color: var(--brass); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.proof-item b.word { font-size: clamp(22px, 2.5vw, 32px); min-height: 1.45em; display: flex; align-items: flex-end; }
+#app[data-lang="zh"] .proof-item b { font-weight: 700; font-size: clamp(28px, 3.4vw, 38px); }
+.proof-label { font-weight: 700; font-size: 16px; color: var(--fg); }
+.proof-item small { color: var(--muted); font-size: 14px; }
+@media (max-width: 900px) { .proof-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 420px) { .proof-item { padding: 20px 16px; } .proof-item b { font-size: 30px; } .proof-item b.word { font-size: 21px; } }
+
+/* policy care */
+.care-wrap { max-width: 880px; display: grid; gap: 12px; }
+.care-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 20px; }
+.care-aside { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.care-wrap h2 { font-size: clamp(30px, 4.4vw, 46px); }
+.care-lead { margin-bottom: 14px; }
+.care-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+.care-card { display: grid; gap: 6px; align-content: start; padding: 22px 24px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; color: var(--fg); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; min-width: 0; }
+.care-card:hover { transform: translateY(-2px); border-color: var(--brass); box-shadow: 0 10px 26px rgba(19,40,59,.08); }
+.care-ico { width: 26px; height: 26px; fill: none; stroke: var(--brass); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 8px; }
+.care-card b { font-size: 18px; font-weight: 700; }
+.care-card small { color: var(--muted); font-size: 14px; }
+.care-btn { width: 100%; margin-top: 10px; padding: 18px; font-size: 16px; }
+@media (max-width: 560px) { .care-grid { grid-template-columns: 1fr; } }
+
+/* claims, short version */
+.pain-chips { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.pain-chips li { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; font-size: 15px; font-weight: 600; }
+.claims-note { margin-top: 18px; font-size: 13px; color: var(--muted); }
+
+/* what we do */
+.svc-wrap { max-width: 880px; display: grid; gap: 8px; }
+.svc-intro { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(22px, 4vw, 36px); display: grid; gap: 14px; box-shadow: 0 1px 2px rgba(19,40,59,.05), 0 8px 24px rgba(19,40,59,.07); }
+.svc-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); }
+.svc-intro h2 { font-size: clamp(30px, 4.4vw, 46px); }
+.svc-intro-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 6px; }
+.svc-hint { color: var(--muted); font-size: 15px; }
+.btn-navy { background: var(--fg); color: var(--panel); }
+.btn-light { background: var(--panel); color: var(--fg); }
+.svc-list { display: grid; }
+.svc { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 26px; align-items: center; padding-block: 26px; border-bottom: 1px solid var(--line); }
+.svc-img { width: 200px; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); }
+.svc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.svc-img.empty { background: linear-gradient(135deg, var(--panel-2), var(--panel)); border-style: dashed; }
+.svc-body { display: grid; gap: 4px; min-width: 0; }
+.svc-num { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); }
+.svc h3 { font-size: clamp(22px, 2.6vw, 26px); }
+.svc-body > p { color: var(--muted); font-size: 15px; }
+.svc-tags.svc-tags { font-size: 13px; color: var(--fg); opacity: .75; }
+.svc-link { margin-top: 6px; color: var(--brass); font-weight: 600; font-size: 15px; text-decoration: none; justify-self: start; }
+.svc-link:hover { text-decoration: underline; }
+.svc-cta { margin-top: 20px; background: var(--fg); color: var(--panel); border-radius: var(--radius); padding: clamp(22px, 3.5vw, 32px); display: grid; gap: 10px; }
+.svc-cta p { opacity: .85; }
+.svc-cta .btn { width: 100%; margin-top: 8px; }
+@media (max-width: 520px) { .svc { grid-template-columns: 96px minmax(0,1fr); gap: 16px; align-items: start; } .svc-img { width: 96px; aspect-ratio: 1; border-radius: 12px; } }
+
+/* client story albums + photo viewer */
+.albums { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.album { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; min-width: 0; border-radius: var(--radius); overflow: hidden; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 1px 2px rgba(19,40,59,.05), 0 8px 24px rgba(19,40,59,.07); transition: transform .2s ease, box-shadow .2s ease; }
+.album:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(19,40,59,.06), 0 14px 32px rgba(19,40,59,.12); }
+.album:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+.album-img { display: block; aspect-ratio: 4 / 5; max-width: 100%; overflow: hidden; background: var(--panel-2); border-bottom: 1px solid var(--line); }
+.album-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.album-body { display: grid; gap: 4px; padding: 18px 20px 20px; }
+.album-tag { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+.album b { font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.25; color: var(--fg); }
+#app[data-lang="zh"] .album b { font-weight: 700; }
+.album small { color: var(--muted); font-size: 14px; }
+.album-count { margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--brass); }
+.albums-note { margin-top: 20px; max-width: 80ch; color: var(--muted); font-size: 13px; border-left: 2px solid var(--brass); padding-left: 12px; }
+@media (max-width: 860px) { .albums { grid-template-columns: 1fr; max-width: 440px; } }
+
+.viewer { position: fixed; inset: 0; z-index: 50; background: rgba(10,22,34,.86); display: grid; place-items: center; padding-top: calc(16px + env(safe-area-inset-top, 0px)); padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.viewer-box { width: min(560px, 100%); max-height: 100%; display: grid; grid-template-rows: auto minmax(0,1fr) auto; gap: 12px; color: #F3F6FA; }
+.viewer-top { display: flex; align-items: center; gap: 12px; }
+.viewer-title { font-weight: 700; margin-right: auto; }
+.viewer-count { font-family: var(--mono); font-size: 12px; opacity: .8; font-variant-numeric: tabular-nums; }
+.viewer-stage { position: relative; display: grid; place-items: center; min-height: 0; }
+.viewer-stage img { max-width: 100%; max-height: calc(100vh - 170px); width: auto; height: auto; object-fit: contain; border-radius: 12px; background: #fff; }
+.viewer-btn { background: rgba(255,255,255,.14); color: #fff; border: 1px solid rgba(255,255,255,.25); width: 40px; height: 40px; border-radius: 50%; font-size: 18px; line-height: 1; cursor: pointer; display: grid; place-items: center; flex: none; }
+.viewer-btn:hover { background: rgba(255,255,255,.26); }
+.viewer-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; font-size: 28px; background: rgba(10,22,34,.6); }
+#viewer-prev { left: 8px; }
+#viewer-next { right: 8px; }
+.viewer-caption { font-size: 14px; opacity: .9; text-align: center; min-height: 1.4em; }
+
+/* work hard, play hard */
+.life-intro strong { display: block; color: var(--fg); font-size: 17px; margin-bottom: 6px; }
+.life .growth-head em { font-style: italic; color: var(--brass); }
+.life-label { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin-block: 36px 14px; }
+.life .growth-head + .life-label { margin-top: 0; }
+.mosaic { display: grid; gap: 12px; }
+.mosaic.work { grid-template-columns: repeat(4, minmax(0,1fr)); }
+.mosaic.work .wide { grid-column: span 2; aspect-ratio: 2 / 1; }
+.mosaic.work .tall { grid-row: span 2; }
+.mosaic.work .wide:last-child { grid-column: 1 / span 2; grid-row: 2; }
+.mosaic.play { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.mosaic.play .g { aspect-ratio: 3 / 4; }
+.g { position: relative; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--panel-2); min-width: 0; max-width: 100%; }
+.g img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.g:hover img { transform: scale(1.04); }
+.g figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 14px 12px; background: linear-gradient(transparent, rgba(6,14,16,.8)); color: #F3EEE4; font-size: 13px; font-weight: 600; }
+@media (max-width: 760px) {
+  .mosaic.work { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .mosaic.work .wide, .mosaic.work .wide:last-child { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 16 / 9; }
+  .mosaic.work .tall { grid-row: auto; aspect-ratio: 3 / 4; }
+  .mosaic.play { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .mosaic.play .g:last-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+}
+
+/* careers */
+.growth { margin-bottom: 40px; }
+.growth-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 40px; align-items: end; margin-bottom: 24px; }
+.growth-head h3 { font-size: clamp(28px, 3.6vw, 40px); }
+.growth-head em { font-style: italic; color: var(--brass); display: block; }
+.growth-head p { color: var(--muted); font-size: 15px; justify-self: end; max-width: 46ch; }
+.growth-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+.tile { margin: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--panel); min-width: 0; }
+.tile-img { aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden; background: var(--panel-2); }
+.tile-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.tile:hover .tile-img img { transform: scale(1.03); }
+.tile-img.empty { display: grid; place-items: center; border-bottom: 1px dashed var(--line); font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.tile figcaption { padding: 18px 20px; font-family: var(--display); font-size: 20px; text-align: center; }
+@media (max-width: 720px) { .growth-head { grid-template-columns: 1fr; } .growth-head p { justify-self: start; } }
+@media (max-width: 520px) { .growth-grid { grid-template-columns: 1fr; } }
+.career-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.career-grid > div { padding: 28px; border-left: 1px solid var(--line); min-width: 0; }
+.career-grid > div:first-child { border-left: 0; }
+.career-grid h3 { margin-bottom: 14px; font-size: 22px; }
+.career-grid ul { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 8px; font-size: 15px; }
+.career-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; margin-top: 28px; }
+.career-cta p { color: var(--muted); max-width: 56ch; font-size: 15px; }
+@media (max-width: 860px) { .career-grid { grid-template-columns: 1fr; } .career-grid > div { border-left: 0; border-top: 1px solid var(--line); } .career-grid > div:first-child { border-top: 0; } }
+
+/* enquiry desk */
+.desk { background: var(--panel); border-top: 1px solid var(--line); }
+.desk-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 64px); }
+.contact-list { margin-top: 28px; display: grid; gap: 14px; font-size: 15px; }
+.contact-list div { display: grid; gap: 2px; }
+.contact-list small { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.form { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(20px, 3vw, 32px); }
+.tabs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 5px; margin-bottom: 24px; }
+.tabs button { background: none; border: 0; border-radius: 8px; padding: 11px 6px; font: 600 14px/1.2 var(--body); color: var(--muted); cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--navy); color: var(--ivory); }
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.full { grid-column: 1 / -1; }
+label, .lbl { display: block; font-size: 13px; font-weight: 600; margin-bottom: 7px; }
+label .opt, .lbl .opt { color: var(--muted); font-weight: 400; }
+input, select, textarea { width: 100%; font: 15px/1.4 var(--body); color: var(--fg); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--brass); }
+textarea { min-height: 96px; resize: vertical; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips label { margin: 0; font-weight: 500; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; background: var(--panel); }
+.chips input { width: auto; accent-color: var(--brass); margin: 0; }
+.chips label:has(input:checked) { border-color: var(--brass); background: var(--brass-soft); }
+.err { color: var(--danger); font-size: 13px; margin-top: 6px; }
+.form-foot { margin-top: 22px; display: grid; gap: 14px; }
+.form-foot .btn { width: 100%; padding: 17px; font-size: 16px; }
+.privacy { font-size: 13px; color: var(--muted); }
+@media (max-width: 860px) { .desk-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .fields { grid-template-columns: 1fr; } }
+
+footer { border-top: 1px solid var(--line); padding-block: 40px 100px; color: var(--muted); font-size: 13px; }
+footer .wrap { display: grid; gap: 14px; }
+footer .disclaimer { max-width: 90ch; }
+
+.float-wa { position: fixed; right: calc(18px + env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #08331A; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(20,43,47,.18); }
+.shot, .win, .tile, .g, .claim-shot, .form, .member { box-shadow: 0 1px 2px rgba(19,40,59,.05), 0 8px 24px rgba(19,40,59,.07); }
+.float-wa svg { width: 28px; height: 28px; }
+/* careers: a deep navy band so the opportunity stands apart from the client-facing sections */
+#careers {
+  --bg: #0D2135; --panel: #15304B; --panel-2: #1C3B5A; --line: #2D4C6B;
+  --fg: #F3F7FB; --muted: #BACADB; --brass: #E3B865; --brass-soft: rgba(227,184,101,.16); --on-brass: #1A1306;
+  background: var(--bg); color: var(--fg);
+  background-image: radial-gradient(60% 50% at 85% 0%, rgba(227,184,101,.18), transparent 70%), radial-gradient(50% 45% at 0% 100%, rgba(40,170,155,.22), transparent 70%), radial-gradient(40% 35% at 50% 50%, rgba(113,81,200,.14), transparent 70%);
+}#careers .tile { background: var(--panel); border-color: var(--line); }
+#careers .tile figcaption { color: var(--fg); }
+#careers .career-grid { background: var(--panel); }
+#careers .career-grid li { color: var(--muted); }
+#careers .career-grid h3 { color: var(--brass); }
+
+/* ── layers ─────────────────────────────────────────── */
+.hero { position: relative; overflow: clip; isolation: isolate; }
+.hero::before, .hero::after { content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%; }
+.hero::before { width: 620px; height: 620px; left: -180px; top: -160px; background: radial-gradient(closest-side, rgba(255,255,255,.95), rgba(255,255,255,0)); }
+.hero::after { width: 520px; height: 520px; right: -140px; bottom: -220px; background: radial-gradient(closest-side, rgba(176,132,58,.16), rgba(176,132,58,0)); }
+.portrait-wrap { position: relative; max-width: 100%; }
+.portrait-wrap .portrait { position: relative; z-index: 1; box-shadow: 0 30px 60px -20px rgba(19,40,59,.35), 0 8px 18px rgba(19,40,59,.08); border: 0; }
+.plate { position: absolute; inset: 0; transform: translate(18px, 18px); border-radius: var(--radius); border: 1.5px solid var(--brass); background: repeating-linear-gradient(135deg, var(--brass-soft) 0 2px, transparent 2px 10px); }
+.float-card { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; box-shadow: 0 14px 30px -10px rgba(19,40,59,.28); color: var(--fg); }
+.float-card b { display: block; font-size: 14px; line-height: 1.2; }
+.float-card small { display: block; font-size: 12px; color: var(--muted); line-height: 1.3; }
+.fc-top { top: 22px; right: -18px; }
+.fc-bottom { bottom: 70px; left: -22px; }
+.fc-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px rgba(46,125,87,.15); flex: none; }
+.fc-num { font-family: "Gloock", serif; font-weight: 400 !important; font-size: 30px !important; color: var(--brass); }
+@media (max-width: 820px) { .portrait-wrap { max-width: 420px; } .fc-top { right: 10px; } .fc-bottom { left: 10px; } }
+
+/* sections sit on soft layered sheets */
+.proof, .claims, .team, .desk { position: relative; box-shadow: 0 -1px 0 var(--line), 0 -24px 48px -36px rgba(19,40,59,.25); }
+.svc-intro, .care-card, .proof-item, .album, .win, .tile { transition: transform .45s ease, box-shadow .45s ease, border-color .45s ease; }
+.proof-item:hover, .win:hover, .tile:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -16px rgba(19,40,59,.25); }
+
+/* header gains depth once scrolled */
+header { transition: box-shadow .3s ease, background .3s ease; }
+header.scrolled { box-shadow: 0 10px 30px -18px rgba(19,40,59,.35); background: color-mix(in srgb, var(--bg) 95%, transparent); }
+
+/* credentials ticker */
+.ticker { overflow: hidden; background: var(--fg); color: var(--panel); padding-block: 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.ticker-track { display: flex; width: max-content; animation: ticker 64s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.ticker li { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; white-space: nowrap; padding-inline: 22px; display: flex; align-items: center; gap: 44px; }
+.ticker li::after { content: "✦"; color: #D9B26A; margin-left: 0; }
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+/* ── motion ─────────────────────────────────────────── */
+@keyframes rise { from { opacity: 0; translate: 0 22px; } to { opacity: 1; translate: 0 0; } }
+@keyframes settle { from { opacity: 0; transform: scale(.96) translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.hero-grid > div:last-child > * { animation: rise 1.4s cubic-bezier(.2,.7,.2,1) both; }
+.hero-grid > div:last-child > :nth-child(2) { animation-delay: .15s; }
+.hero-grid > div:last-child > :nth-child(3) { animation-delay: .3s; }
+.hero-grid > div:last-child > :nth-child(4) { animation-delay: .45s; }
+.hero-grid > div:last-child > :nth-child(5) { animation-delay: .6s; }
+.hero-grid > div:last-child > :nth-child(6) { animation-delay: .75s; }
+.hero-grid > div:last-child > :nth-child(n+7) { animation-delay: .9s; }
+.portrait-wrap .portrait { animation: settle 1.8s cubic-bezier(.2,.7,.2,1) both; }
+.plate { animation: settle 1.8s .3s cubic-bezier(.2,.7,.2,1) both; }
+.fc-top { animation: rise .7s .6s both, bob 6s 1.4s ease-in-out infinite; }
+.fc-bottom { animation: rise .7s .75s both, bob 7s 1.6s ease-in-out infinite; }
+
+/* scroll reveals: driven by scroll position, so anything already on screen is fully shown */
+@supports (animation-timeline: view()) {
+  .head, .growth-head, .proof-head, .svc-intro, .svc, .svc-cta, .care-wrap > h2, .care-card, .care-btn,
+  .proof-item, .album, .win, .tile, .g, .career-grid > div, .career-cta, .form, .desk-grid > div:first-child {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+}
+/* ── colour system: navy key bands alternate with ivory / white / blue-grey reading bands ── */
+.dark {
+  --bg: #10263A; --panel: #18324A; --panel-2: #213E58; --line: #2E4A63;
+  --fg: #F5F3EF; --muted: #B8C3CE; --brass: #D5AC62; --brass-soft: rgba(213,172,98,.16); --on-brass: #10263A;
+  color: var(--fg);
+}
+.dark h1, .dark h2, .dark h3 { color: #FFFFFF; }
+
+/* hero: navy into charcoal, a single gold glow */
+.hero { background:
+  radial-gradient(45% 55% at 100% 0%, rgba(213,172,98,.16), transparent 70%),
+  radial-gradient(40% 50% at 0% 100%, rgba(41,55,70,.9), transparent 70%),
+  linear-gradient(135deg, #10263A 0%, #142D44 55%, #293746 100%); }
+.hero::before { background: radial-gradient(closest-side, rgba(213,172,98,.10), rgba(213,172,98,0)); }
+.hero::after { background: radial-gradient(closest-side, rgba(255,255,255,.06), rgba(255,255,255,0)); }
+.hero .portrait-wrap .portrait { box-shadow: 0 30px 60px -20px rgba(0,0,0,.55); }
+.hero .plate { border-color: var(--gold); }
+.hero .awards li { color: var(--gold); border-color: rgba(213,172,98,.6); background: rgba(213,172,98,.10); }
+
+/* ticker: charcoal strip under the hero with gold marks */
+.ticker { background: linear-gradient(90deg, #0C1E2E, var(--charcoal) 50%, #0C1E2E); color: #E9E4DA; border-top: 1px solid rgba(213,172,98,.25); }
+.ticker li::after { color: var(--gold); }
+
+/* light reading bands */
+/* light bands: visible but soft gradients built only from ivory, white, blue-grey and a hint of gold */
+.proof { background:
+  radial-gradient(50% 80% at 100% 0%, rgba(213,172,98,.22), transparent 70%),
+  radial-gradient(45% 70% at 0% 100%, rgba(220,227,233,.9), transparent 70%),
+  linear-gradient(135deg, #FBF6EC 0%, var(--ivory) 50%, #E9EEF2 100%); border-color: var(--line); }
+#services { background:
+  radial-gradient(40% 35% at 0% 0%, rgba(220,227,233,1), transparent 70%),
+  radial-gradient(45% 35% at 100% 55%, rgba(213,172,98,.16), transparent 70%),
+  linear-gradient(180deg, #FFFFFF 0%, var(--ivory) 50%, #E6ECF1 100%); }
+#stories { background:
+  radial-gradient(45% 60% at 100% 0%, rgba(255,255,255,.85), transparent 70%),
+  radial-gradient(40% 55% at 0% 100%, rgba(213,172,98,.16), transparent 70%),
+  linear-gradient(160deg, #D3DCE4 0%, var(--bluegrey) 45%, #F1EEE8 100%); }
+.team { background:
+  radial-gradient(45% 55% at 0% 100%, rgba(213,172,98,.14), transparent 70%),
+  linear-gradient(160deg, #293746 0%, #10263A 70%); border-color: transparent; }
+.team .win { border-color: var(--line); box-shadow: 0 20px 40px -18px rgba(0,0,0,.55); }
+.life { background:
+  radial-gradient(45% 50% at 0% 0%, rgba(213,172,98,.18), transparent 70%),
+  radial-gradient(45% 50% at 100% 100%, rgba(220,227,233,1), transparent 70%),
+  linear-gradient(135deg, #FBF7EF 0%, #FFFFFF 45%, #E8EDF2 100%); }
+.desk { background:
+  radial-gradient(45% 60% at 100% 0%, rgba(213,172,98,.18), transparent 70%),
+  radial-gradient(40% 55% at 0% 100%, rgba(255,255,255,.8), transparent 70%),
+  linear-gradient(160deg, #D5DEE6 0%, var(--bluegrey) 40%, #F3EFE7 100%); border-color: #C9D3DC; }
+
+/* talks & sharing: navy band */
+.talks { background:
+  radial-gradient(45% 55% at 100% 100%, rgba(213,172,98,.16), transparent 70%),
+  linear-gradient(150deg, #10263A 0%, #183048 55%, #293746 100%); }
+.talks .growth-head { margin-bottom: 32px; }
+.talks .growth-head em { font-style: italic; color: var(--gold); }
+.talks .growth-head .eyebrow { color: var(--gold); font-size: 12px; max-width: none; justify-self: start; }
+.talks .growth-head > div { display: grid; justify-items: start; }
+.talks .growth-head h2 { font-size: clamp(30px, 4.2vw, 46px); }
+.talks-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px; align-items: stretch; }
+.talk-main { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3 / 4; max-width: 100%; align-self: start; border: 1px solid var(--line); box-shadow: 0 24px 48px -20px rgba(0,0,0,.6); }
+.talk-main img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.talk-main figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(8,18,28,.85)); color: #F5F3EF; font-size: 14px; font-weight: 600; }
+.talks-side { display: grid; gap: 20px; grid-template-rows: 1fr; min-width: 0; }
+.talk-quote { position: relative; padding: 28px 30px; border-radius: var(--radius); border: 1px solid rgba(213,172,98,.45); background: linear-gradient(135deg, rgba(213,172,98,.14), rgba(255,255,255,.03)); }
+.talk-quote::before { content: "“"; position: absolute; top: -6px; right: 22px; font-family: "Gloock", serif; font-size: 110px; line-height: 1; color: rgba(213,172,98,.25); }
+.talk-tag { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.talk-title { font-family: "Noto Sans SC", serif; font-weight: 700; font-size: clamp(30px, 4vw, 44px); letter-spacing: .06em; color: #FFFFFF; margin-top: 12px; }
+.talk-sub { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--muted); margin-top: 4px; }
+.talk-meta { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.talk-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; min-height: 220px; }
+.talk-pair figure { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); min-height: 220px; }
+.talk-pair img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.talk-pair figure:hover img, .talk-main:hover img { transform: scale(1.04); }
+.talk-main img { transition: transform .6s ease; }
+@media (max-width: 860px) {
+  .talks-grid { grid-template-columns: 1fr; }
+  .talk-main { width: min(100%, 520px); justify-self: center; }
+  .talk-pair figure { aspect-ratio: 4 / 3; min-height: 0; }
+  .talk-pair { min-height: 0; }
+}
+@media (max-width: 520px) { .talk-pair { grid-template-columns: 1fr; } }
+
+/* policy care: a navy band for the key service promise */
+.claims { background:
+  radial-gradient(40% 60% at 100% 0%, rgba(213,172,98,.12), transparent 70%),
+  linear-gradient(160deg, #10263A 0%, #1A3249 60%, #293746 100%); border-color: transparent; }
+.claims .care-card { background: rgba(255,255,255,.04); border-color: var(--line); }
+.claims .care-card:hover { border-color: var(--gold); background: rgba(255,255,255,.07); }
+
+/* footer: navy close */
+footer { background: linear-gradient(180deg, var(--charcoal), #10263A); color: #B8C3CE; border-top: 1px solid rgba(213,172,98,.25); }
+footer b { color: #F5F3EF !important; }
+
+/* one accent family everywhere: gold marks on navy and ivory */
+.proof-item { border-top-color: var(--gold); background: linear-gradient(180deg, #FFFFFF, var(--ivory)); }
+.proof-item b { color: var(--navy); }
+.proof-item b.word { color: var(--brass); }
+.svc-num { color: var(--brass); background: var(--brass-soft); justify-self: start; padding: 4px 10px; border-radius: 999px; }
+.svc-img { box-shadow: 8px 8px 0 var(--bluegrey); border-color: transparent; }
+.svc-link { color: var(--brass); }
+.svc-intro { background: linear-gradient(135deg, #FFFFFF 0%, var(--ivory) 100%); }
+.svc-cta { background: linear-gradient(120deg, var(--navy) 0%, var(--charcoal) 100%); color: var(--ivory); }
+.svc-cta h3 { color: #FFFFFF; }
+.care-ico { stroke: var(--gold); background: rgba(213,172,98,.12); width: 46px; height: 46px; padding: 10px; border-radius: 50%; box-sizing: border-box; }
+.album-tag, .album-count { color: var(--brass); }
+.care-card, .win, .form { background: var(--panel); }
+.claims .care-card { background: rgba(255,255,255,.04); }
+.eyebrow, .svc-eyebrow, .life-label { color: var(--brass); }
+.dark .eyebrow, .dark .svc-eyebrow { color: var(--gold); }
+.shot, .win, .tile, .g, .form, .album, .svc-intro { box-shadow: 0 1px 2px rgba(16,38,58,.05), 0 10px 28px -8px rgba(16,38,58,.12); }
+</style>
+</head>
+<body>
+
+<div id="app" data-lang="en">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="logo-mark" role="img" aria-label="Da Maven logo"></span>
+      <span><b>Da Maven</b><small>Wealth Management Consultancy</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#services"><span class="en">Services</span><span class="zh">服务</span></a>
+      <a href="#claims"><span class="en">Policy Care</span><span class="zh">保单服务</span></a>
+      <a href="#team"><span class="en">Achievements</span><span class="zh">团队荣誉</span></a>
+      <a href="#careers"><span class="en">Careers</span><span class="zh">事业机会</span></a>
+      <a href="#enquire"><span class="en">Contact</span><span class="zh">联系</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-zh" aria-pressed="false">中文</button>
+    </div>
+    <a class="btn btn-brass" href="#enquire" data-goto="quote"><svg class="wa-ico"><use href="#wa"/></svg><span class="en">Get a quote</span><span class="zh">咨询详情</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero dark">
+  <div class="wrap hero-grid">
+    <div class="portrait-wrap">
+      <span class="plate" aria-hidden="true"></span>
+      <div class="portrait">
+        <img class="crop-ent" src="images/ent.png" alt="Cheong Suh Sian (Ent Jia Qi)">
+        <span class="tag"><span class="en">Ent · Founder, Da Maven</span><span class="zh">Ent · Da Maven 创办人</span></span>
+      </div>    </div>
+    <div>
+      <p class="eyebrow"><span class="en">Founder</span><span class="zh">创办人</span></p>
+      <h1>Ent Jia Qi <span class="aka">Cheong Suh Sian</span></h1>
+      <p class="roles">
+        <span class="en">Insurance Manager</span><span class="zh">保险经理</span>
+        <span class="en">Rockwills Franchisee</span><span class="zh">Rockwills 加盟商</span>
+        <span class="en">Financial Planner</span><span class="zh">财务规划师</span>
+      </p>
+      <p class="lead">
+        <span class="en">Empowering individuals, families and businesses to protect their wealth, plan their future and preserve their legacy.</span>
+        <span class="zh">协助个人、家庭与企业守护财富、规划未来、传承心意。</span>
+      </p>
+      <div class="quote">
+        <p class="en">Plan with confidence. Live with peace of mind.</p>
+        <p class="en quote-sub">Wealth deserves planning. The future deserves preparation. Love deserves a lasting legacy.</p>
+        <p class="zh">「财富需要规划，未来值得安排，爱与责任更需要传承。」</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-brass" href="#enquire" data-goto="quote"><svg class="wa-ico"><use href="#wa"/></svg><span class="en">Request a free quotation</span><span class="zh">获取专属规划建议</span></a>      </div>
+      <dl class="creds">
+        <div><dt><span class="en">Da Maven Wealth Management Consultancy</span><span class="zh">Da Maven 财富管理顾问</span></dt><dd><span class="en">Founder &amp; principal</span><span class="zh">创办人</span></dd></div>
+        <div><dt>Great Eastern</dt><dd><span class="en">Insurance partner · Unit Manager</span><span class="zh">保险伙伴 · 单位经理</span></dd></div>
+        <div><dt>Rockwills</dt><dd><span class="en">Franchisee · Estate &amp; Trust Planning Partner<br>Will &amp; Legacy Planning Partner</span><span class="zh">加盟商 · 遗产与信托规划伙伴<br>遗嘱与传承规划伙伴</span></dd></div>
+        <div><dt><span class="en">Awards &amp; recognition</span><span class="zh">奖项与荣誉</span></dt><dd><span class="en">Achievements across production and leadership</span><span class="zh">业绩与领导力相关荣誉</span></dd></div>
+      </dl>
+      <ul class="awards" aria-label="Awards">
+        <li>Starlight 100</li>
+        <li>Supremacy Qualifier</li>
+        <li>SES Qualifier</li>
+        <li>Great Leo Qualifier</li>
+        <li>Great Pro Leo Qualifier</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS TICKER -->
+<div class="ticker" aria-label="Credentials and awards">
+  <div class="ticker-track">
+    <ul>
+      <li>Great Eastern · Unit Manager</li>
+      <li>Rockwills Franchisee</li>
+      <li>Starlight 100</li>
+      <li>Supremacy Qualifier</li>
+      <li>SES Qualifier</li>
+      <li>Great Leo Qualifier</li>
+      <li>Great Pro Leo Qualifier</li>
+      <li><span class="en">10+ Years Experience</span><span class="zh">10+ 年经验</span></li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>Great Eastern · Unit Manager</li>
+      <li>Rockwills Franchisee</li>
+      <li>Starlight 100</li>
+      <li>Supremacy Qualifier</li>
+      <li>SES Qualifier</li>
+      <li>Great Leo Qualifier</li>
+      <li>Great Pro Leo Qualifier</li>
+      <li><span class="en">10+ Years Experience</span><span class="zh">10+ 年经验</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="proof">
+  <div class="wrap">
+    <div class="proof-head">
+      <h2><span class="en">Experience you can count on</span><span class="zh">值得信赖的经验</span></h2>
+      <p><span class="en">Building confidence through experience, expertise and personalised service.</span><span class="zh">以经验、专业与贴心服务，建立您的信心。</span></p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <b data-count="10" data-suffix="+">10+</b>
+        <span class="proof-label"><span class="en">Years of industry experience</span><span class="zh">年行业经验</span></span>
+      </div>
+      <div class="proof-item">
+        <b data-count="200" data-suffix="+">200+</b>
+        <span class="proof-label"><span class="en">Claims handled</span><span class="zh">宗理赔处理</span></span>
+      </div>
+      <div class="proof-item">
+        <b class="word"><span class="en">Personalised</span><span class="zh">量身定制</span></b>
+        <span class="proof-label"><span class="en">One-to-one guidance</span><span class="zh">一对一专属指导</span></span>
+        <small><span class="en">Solutions for every life stage</span><span class="zh">为人生每个阶段规划</span></small>
+      </div>
+      <div class="proof-item">
+        <b class="word"><span class="en">Beyond</span><span class="zh">不止于保障</span></b>
+        <span class="proof-label"><span class="en">Wealth protection &amp; preservation</span><span class="zh">财富守护与传承</span></span>
+        <small><span class="en">Protection, planning and legacy in one place</span><span class="zh">保障、规划与传承，一站完成</span></small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TALKS & SHARING -->
+<section class="talks dark" id="talks">
+  <div class="wrap">
+    <div class="growth-head">
+      <div>
+        <p class="eyebrow"><span class="en">Talks &amp; sharing</span><span class="zh">分享与演讲</span></p>
+        <h2 style="margin-top:14px"><span class="en">Sharing the journey, <em>lighting the way</em></span><span class="zh">分享这段路，<em>照亮下一位</em></span></h2>
+      </div>
+      <p><span class="en">I'm invited to speak to fellow advisers about my journey: the lessons, the habits and the mindset that kept me moving forward.</span><span class="zh">一路走来的经验分享与真实体验</span></p>
+    </div>
+
+    <div class="talks-grid">
+      <figure class="talk-main">
+        <img src="images/talk-certificate.webp" alt="Ent receiving a certificate of appreciation as guest speaker" loading="lazy">
+        <figcaption><span class="en">Invited as a guest speaker</span><span class="zh">受邀担任分享嘉宾</span></figcaption>
+      </figure>
+
+      <div class="talks-side">
+        <div class="talk-pair">
+          <figure><img src="images/talk-stage.webp" alt="Ent speaking on stage to a room of advisers" loading="lazy" style="object-position: 50% 50%"></figure>
+          <figure><img src="images/talk-team-stage.webp" alt="Group photo with fellow advisers on stage" loading="lazy" style="object-position: 50% 62%"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap svc-wrap">
+    <div class="svc-intro">
+      <p class="svc-eyebrow"><span class="en">What we do</span><span class="zh">我们的服务</span></p>
+      <h2><span class="en">Your life. Your wealth. Your legacy.</span><span class="zh">您的生活，您的财富，您的传承。</span></h2>
+      <p class="lead"><span class="en">One trusted adviser to help you protect what matters, plan for the future and leave a lasting legacy.</span><span class="zh">一位值得信赖的顾问，帮您守护重要的人事物、规划未来，并留下长久的传承。</span></p>
+      <div class="svc-intro-cta">
+        <a class="btn btn-navy" href="#enquire" data-goto="quote"><span class="en">Let's plan your future</span><span class="zh">一起规划未来</span> <span aria-hidden="true">↗</span></a>      </div>
+    </div>
+
+    <div class="svc-list">
+      <div class="svc">
+        <div class="svc-img"><img src="images/svc-protect.webp" alt="Family relaxing together on a sofa at home" loading="lazy" style="object-position: 50% 82%"></div>
+        <div class="svc-body">
+          <p class="svc-num">01 · <span class="en">Protect</span><span class="zh">保障</span></p>
+          <h3><span class="en">Protection Planning</span><span class="zh">保障规划</span></h3>
+          <p><span class="en">The right protection for life's unexpected moments.</span><span class="zh">为人生的意外时刻，做好合适的保障。</span></p>
+          <p class="svc-tags"><span class="en">Medical · Life · Critical Illness · Income Protection · Spouse Protection · Parents Protection</span><span class="zh">医药 · 人寿 · 重大疾病 · 收入保障 · 夫妻保障 · 父母亲保障</span></p>
+          <a class="svc-link" href="#enquire" data-goto="quote" data-need="medical"><span class="en">Review my protection</span><span class="zh">检视我的保障</span> →</a>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="svc-img"><img src="images/svc-legacy.webp" alt="Adult children and their elderly mother reading a document together" loading="lazy" style="object-position: 50% 40%"></div>
+        <div class="svc-body">
+          <p class="svc-num">02 · <span class="en">Preserve</span><span class="zh">传承</span></p>
+          <h3><span class="en">Secure Your Legacy</span><span class="zh">安排您的传承</span></h3>
+          <p><span class="en">Make your wishes clear. Plan who receives what.</span><span class="zh">提前规划，让财富按照您的意愿传承。</span></p>
+          <p class="svc-tags"><span class="en">Will · Guardianship · Estate Planning</span><span class="zh">遗嘱 · 监护人 · 遗产规划</span></p>
+          <a class="svc-link" href="#enquire" data-goto="quote" data-need="will"><span class="en">Plan my legacy</span><span class="zh">规划我的传承</span> →</a>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="svc-img"><img src="images/svc-future.webp" alt="Couple reviewing their financial plan at the dining table" loading="lazy" style="object-position: 58% 50%"></div>
+        <div class="svc-body">
+          <p class="svc-num">03 · <span class="en">Grow</span><span class="zh">财务规划</span></p>
+          <h3><span class="en">Build Your Future</span><span class="zh">规划您的财富未来</span></h3>
+          <p><span class="en">Turn your financial goals into a practical plan.</span><span class="zh">让每一份收入与储蓄，都为未来做好准备。</span></p>
+          <p class="svc-tags"><span class="en">Retirement · Education · Savings</span><span class="zh">退休规划 · 子女教育 · 财富储蓄</span></p>
+          <a class="svc-link" href="#enquire" data-goto="quote" data-need="planning"><span class="en">Plan my finances</span><span class="zh">了解财富规划</span> →</a>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="svc-img"><img src="images/svc-business.webp" alt="Two business professionals in a meeting with a laptop" loading="lazy" style="object-position: 50% 40%"></div>
+        <div class="svc-body">
+          <p class="svc-num">04 · <span class="en">Sustain</span><span class="zh">永续</span></p>
+          <h3><span class="en">Protect Your Business</span><span class="zh">保障您的企业</span></h3>
+          <p><span class="en">Safeguard your people and business continuity.</span><span class="zh">守护您的员工，确保企业持续运作。</span></p>
+          <p class="svc-tags"><span class="en">Employee Benefits · Key Person · Partnership</span><span class="zh">员工福利 · 核心管理层 · 股东保障</span></p>
+          <a class="svc-link" href="#enquire" data-goto="quote" data-need="business"><span class="en">Explore business protection</span><span class="zh">了解企业保障</span> →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-cta">
+      <h3><span class="en">Not sure where to start?</span><span class="zh">不知道从哪里开始？</span></h3>
+      <p><span class="en">Let's review what you already have and identify what matters most.</span><span class="zh">我们先一起检视您现有的保障，找出最重要的需要。</span></p>
+      <a class="btn btn-light" href="#enquire" data-goto="quote" data-need="review"><span class="en">Book a consultation</span><span class="zh">预约咨询</span> <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- POLICY CARE (existing policy support) -->
+<section class="claims dark" id="claims">
+  <div class="wrap care-wrap">
+    <div class="care-top">
+      <p class="svc-eyebrow"><span class="en">Existing policy support</span><span class="zh">现有保单服务</span></p>
+      <p class="care-aside"><span class="en">Here when you need us</span><span class="zh">需要时，我们都在</span></p>
+    </div>
+    <h2><span class="en">Your policy deserves attention, too.</span><span class="zh">您的保单，也值得被用心照顾。</span></h2>
+    <p class="lead care-lead"><span class="en">Not sure about your coverage? Need help with your policy? We're just a message away.</span><span class="zh">不确定保障范围？保单需要协助？发个信息就可以。</span></p>
+
+    <div class="care-grid">
+      <a class="care-card" href="#enquire" data-goto="claim" data-help="Understanding my coverage">
+        <svg class="care-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        <b><span class="en">Understand your coverage</span><span class="zh">了解您的保障</span></b>
+        <small><span class="en">Know what your policy really covers.</span><span class="zh">清楚知道保单保了什么。</span></small>
+      </a>
+      <a class="care-card" href="#enquire" data-goto="claim" data-help="Updating my details / nominee">
+        <svg class="care-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><path d="M17.5 3.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 8.5-8.5z"/></svg>
+        <b><span class="en">Policy updates</span><span class="zh">保单更新</span></b>
+        <small><span class="en">Changes to your personal details or policy.</span><span class="zh">更改个人资料或保单内容。</span></small>
+      </a>
+      <a class="care-card" href="#enquire" data-goto="claim" data-help="Premium or payment">
+        <svg class="care-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7H5a2 2 0 0 1 0-4h13v4"/><path d="M3 5v14a2 2 0 0 0 2 2h15V7"/><path d="M16 14h.01"/></svg>
+        <b><span class="en">Premium &amp; payments</span><span class="zh">保费与付款</span></b>
+        <small><span class="en">Questions about premiums and payments.</span><span class="zh">保费与付款相关疑问。</span></small>
+      </a>
+      <a class="care-card" href="#enquire" data-goto="claim" data-help="Claims &amp; hospitalisation">
+        <svg class="care-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 8v6M9 11h6"/><path d="M8 21v-3h8v3"/></svg>
+        <b><span class="en">Claims &amp; hospitalisation</span><span class="zh">理赔与住院</span></b>
+        <small><span class="en">Guidance when you need medical support.</span><span class="zh">需要医疗协助时，给您方向。</span></small>
+      </a>
+    </div>
+
+    <a class="btn btn-brass care-btn" href="#enquire" data-goto="claim"><svg class="wa-ico"><use href="#wa"/></svg><span class="en">Let's talk about your policy</span><span class="zh">聊聊您的保单</span></a>
+  </div>
+</section>
+
+<!-- CLIENT STORIES — real WhatsApp screenshots shared by clients -->
+<section id="stories">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="en">Client stories</span><span class="zh">客户心声</span></p>
+      <h2><span class="en">In our clients' own words</span><span class="zh">听听客户怎么说</span></h2>
+      <p class="lead"><span class="en">Real messages from real clients. Most of our new clients come through friends who were happy with the service.</span><span class="zh">真实客户的真实留言。我们大部分的新客户，都是满意的朋友介绍来的。</span></p>
+    </div>
+
+    <div class="albums">
+      <button type="button" class="album" id="album-referral" data-album="referral">
+        <span class="album-img"><img src="images/st-referral.webp" alt="" loading="lazy"></span>
+        <span class="album-body">
+          <span class="album-tag"><span class="en">Referrals</span><span class="zh">朋友介绍</span></span>
+          <b><span class="en">Recommended by friends</span><span class="zh">朋友推荐</span></b>
+          <small><span class="en">Happy clients bring their friends and family</span><span class="zh">满意的客户，带来他们的亲友</span></small>
+          <span class="album-count"><span class="en">1 photo · Tap to view</span><span class="zh">1 张照片 · 点击查看</span></span>
+        </span>
+      </button>
+      <button type="button" class="album" id="album-feedback" data-album="feedback">
+        <span class="album-img"><img src="images/st-review-1.png" alt="" loading="lazy"></span>
+        <span class="album-body">
+          <span class="album-tag"><span class="en">Client feedback</span><span class="zh">客户回馈</span></span>
+          <b><span class="en">What clients tell us</span><span class="zh">客户这样说</span></b>
+          <small><span class="en">Messages after claims, reviews and everyday service</span><span class="zh">理赔、保单检视与日常服务后的留言</span></small>
+          <span class="album-count"><span class="en">4 photos · Tap to view</span><span class="zh">4 张照片 · 点击查看</span></span>
+        </span>
+      </button>
+      <button type="button" class="album" id="album-claims" data-album="claims">
+        <span class="album-img"><img src="images/st-claim-4days.png" alt="" loading="lazy"></span>
+        <span class="album-body">
+          <span class="album-tag"><span class="en">Claim speed</span><span class="zh">理赔速度</span></span>
+          <b><span class="en">Paid in 2 to 4 working days</span><span class="zh">2 至 4 个工作天赔付</span></b>
+          <small><span class="en">Two recent claims, from submission to payout</span><span class="zh">两宗近期理赔，从提交到赔付</span></small>
+          <span class="album-count"><span class="en">2 photos · Tap to view</span><span class="zh">2 张照片 · 点击查看</span></span>
+        </span>
+      </button>
+    </div>
+    <p class="speed-note albums-note"><span class="en">Every claim is different. Processing time depends on the policy, the documents and the insurer's assessment, so these examples are not a promise of the same timeline.</span><span class="zh">每宗理赔情况不同，处理时间视保单、文件及保险公司的评估而定，以上例子不代表每宗理赔都能同样快速。</span></p>
+
+    <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Client story photos" hidden>
+      <div class="viewer-box">
+        <div class="viewer-top">
+          <span class="viewer-title" id="viewer-title"></span>
+          <span class="viewer-count" id="viewer-count"></span>
+          <button type="button" class="viewer-btn" id="viewer-close" aria-label="Close">✕</button>
+        </div>
+        <div class="viewer-stage">
+          <button type="button" class="viewer-btn viewer-nav" id="viewer-prev" aria-label="Previous photo">‹</button>
+          <img id="viewer-img" src="" alt="">
+          <button type="button" class="viewer-btn viewer-nav" id="viewer-next" aria-label="Next photo">›</button>
+        </div>
+        <p class="viewer-caption" id="viewer-caption"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM ACHIEVEMENTS -->
+<section class="team dark" id="team">
+  <div class="wrap">
+    <div class="growth-head">
+      <h2><span class="en">Team <em>achievements</em></span><span class="zh">团队<em>荣誉</em></span></h2>
+      <p><span class="en">Our people grow here, and it shows. Every award started with steady work: showing up for clients, following through, and learning together as a team. You could be next.</span><span class="zh">在这里，伙伴们一步步成长，成绩看得见。每一份荣誉，都来自日复一日的用心：为客户付出、做好跟进、一起学习。下一个，可能就是你。</span></p>
+    </div>
+    <div class="wins">
+      <figure class="win">
+        <div class="win-img"><img src="images/award-pei-yoke.webp" alt="Team member receiving a Superhoney award certificate on stage" loading="lazy" style="object-position: 50% 72%"></div>
+        <figcaption>
+          <span class="role">Superhoney Award</span>
+          <b><span class="en">Recognised on stage</span><span class="zh">登台获奖</span></b>
+          <small><span class="en">Honoured at the SG agency awards</span><span class="zh">于 SG 颁奖典礼上获得表扬</span></small>
+        </figcaption>
+      </figure>
+      <figure class="win">
+        <div class="win-img"><img src="images/award-sean.webp" alt="Team member holding a Superbeez Bronze Award certificate and flowers" loading="lazy" style="object-position: 50% 55%"></div>
+        <figcaption>
+          <span class="role">Superbeez · Bronze Award</span>
+          <b><span class="en">Bronze Award achiever</span><span class="zh">铜奖得主</span></b>
+          <small><span class="en">Earned through steady, consistent work</span><span class="zh">靠稳定、持续的努力换来</span></small>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- WORK HARD, PLAY HARD -->
+<section class="life" id="life">
+  <div class="wrap">
+    <div class="growth-head">
+      <h2><span class="en">Work hard, <em>play hard</em></span><span class="zh">认真工作，<em>尽情生活</em></span></h2>
+      <p class="life-intro"><span class="en"><strong>Give Your Best at Work. Make the Most of Life.</strong>Work hard, give it your all, and enjoy every moment along the way.<br><br>From celebrating achievements and team trips to sports and laughter, there's always something exciting to experience together.</span><span class="zh"><strong>努力的时候全力以赴，享受生活时也尽情投入。</strong>荣誉、旅行、运动与欢笑，让每一天的团队生活都充满精彩。</span></p>
+    </div>
+
+    <p class="life-label"><span class="en">Work hard</span><span class="zh">认真工作</span></p>
+    <div class="mosaic work">
+      <figure class="g wide"><img src="images/wh-achievers-night.webp" alt="Super Group SG agency team at the 2024 Achievers Night with the Admired Agency banner" loading="lazy"><figcaption>2024 Achievers Night</figcaption></figure>
+      <figure class="g tall"><img src="images/wh-mdrt-gala.webp" alt="Team selfie in the ballroom at the MDRT 2025 celebration" loading="lazy" style="object-position: 40% 50%"><figcaption>MDRT 2025</figcaption></figure>
+      <figure class="g tall"><img src="images/wh-award-day.webp" alt="Team selfie at an awards event" loading="lazy" style="object-position: 45% 50%"><figcaption><span class="en">Awards day</span><span class="zh">颁奖日</span></figcaption></figure>
+      <figure class="g wide"><img src="images/wh-awards-night.webp" alt="Team group photo in front of the MDRT and Star Light 1000 backdrop" loading="lazy"><figcaption><span class="en">Celebrating the qualifiers</span><span class="zh">一起庆祝达标</span></figcaption></figure>
+    </div>
+
+    <p class="life-label"><span class="en">Play hard</span><span class="zh">尽情生活</span></p>
+    <div class="mosaic play">
+      <figure class="g"><img src="images/ph-padang-besar.webp" alt="Team selfie at Padang Besar KTM station" loading="lazy"><figcaption><span class="en">Team trip · Padang Besar</span><span class="zh">团队旅行 · 巴东勿刹</span></figcaption></figure>
+      <figure class="g"><img src="images/ph-trip.webp" alt="Team members in sunglasses at a hilltop viewpoint" loading="lazy"><figcaption><span class="en">Team trip</span><span class="zh">团队旅行</span></figcaption></figure>
+      <figure class="g"><img src="images/ph-basketball.webp" alt="Four team members in Rampage basketball jerseys on court" loading="lazy" style="object-position: 50% 40%"><figcaption><span class="en">Basketball · Team Rampage</span><span class="zh">篮球 · Team Rampage</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow"><span class="en">Careers</span><span class="zh">事业机会</span></p>
+      <h2><span class="en">Build a career that helps people, with a team that has your back</span><span class="zh">一份能帮助人的事业，一个支持你的团队</span></h2>
+      <p class="lead"><span class="en">We're growing a team of advisers who care about doing the work properly. Experience isn't required. Curiosity, follow-through and integrity are.</span><span class="zh">我们在寻找真心想把事情做好的伙伴。不需要经验，但需要好奇心、执行力和诚信。</span></p>
+    </div>
+    <div class="growth">
+      <div class="growth-head">
+        <h3><span class="en">Grow faster, <em>with structure</em></span><span class="zh">有系统地<em>快速成长</em></span></h3>
+        <p><span class="en">New advisers develop through Super Group, a step-by-step training pathway that turns drive into real skill and confidence in front of clients.</span><span class="zh">新伙伴通过 Super Group 成长。这是一套循序渐进的培训体系，把冲劲转化为真本事，让你面对客户时更有底气。</span></p>
+      </div>
+      <div class="growth-grid">
+        <figure class="tile">
+          <div class="tile-img"><img src="images/weekly-training.webp" alt="Team training session around a meeting table" loading="lazy"></div>
+          <figcaption><span class="en">Weekly practical training</span><span class="zh">每周实战培训</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="tile-img"><img src="images/mentorship.webp" alt="Two team members chatting over a meal" loading="lazy" style="object-position: 50% 30%"></div>
+          <figcaption><span class="en">1-to-1 mentorship</span><span class="zh">一对一辅导</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="tile-img"><img src="images/field-practice.webp" alt="Team members at a Super Group Star Producer event" loading="lazy" style="object-position: 50% 47%"></div>
+          <figcaption><span class="en">Hands-on field practice</span><span class="zh">实地演练</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="tile-img"><img src="images/courses.png" alt="Classroom course on legacy planning" loading="lazy"></div>
+          <figcaption><span class="en">Online &amp; in-person courses</span><span class="zh">线上与线下课程</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="career-grid">
+      <div>
+        <h3><span class="en">Who fits here</span><span class="zh">适合谁</span></h3>
+        <ul>
+          <li><span class="en">Proactive people</span><span class="zh">积极主动的人</span></li>
+          <li><span class="en">Team players who share what they learn</span><span class="zh">愿意分享、重视团队合作的人</span></li>
+          <li><span class="en">Fresh graduates, career switchers, or part-timers testing the waters</span><span class="zh">应届毕业生、转行者，或想先兼职尝试的人</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="en">How we develop you</span><span class="zh">我们如何培养你</span></h3>
+        <ul>
+          <li><span class="en">Structured training on products, needs analysis and claims</span><span class="zh">产品、需求分析与理赔的系统培训</span></li>
+          <li><span class="en">Joint field work: learn by sitting in on real client meetings</span><span class="zh">陪同拜访：在真实的客户会面中学习</span></li>
+          <li><span class="en">A clear path into leadership for those who want it</span><span class="zh">为有意者铺好领导力发展路径</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="en">What you can build</span><span class="zh">你能建立的</span></h3>
+        <ul>
+          <li><span class="en">Flexibility in how you plan your days</span><span class="zh">弹性安排自己的时间</span></li>
+          <li><span class="en">Long-term relationships with clients who become friends</span><span class="zh">与客户建立长久、像朋友般的关系</span></li>
+          <li><span class="en">Income that reflects your effort and the value you deliver</span><span class="zh">收入反映你的付出与所创造的价值</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="career-cta">
+      <p><span class="en">Start with a coffee chat to see if this fits you.</span><span class="zh">先约个咖啡聊聊，看看是否适合你。</span></p>
+      <a class="btn btn-brass" href="#enquire" data-goto="career"><svg class="wa-ico"><use href="#wa"/></svg><span class="en">Book a career chat</span><span class="zh">预约事业交流</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY DESK -->
+<section class="desk" id="enquire">
+  <div class="wrap desk-grid">
+    <div>
+      <p class="eyebrow"><span class="en">Enquiry</span><span class="zh">联系我</span></p>
+      <h2 style="margin-top:16px"><span class="en">Tell me a little, and we'll continue on WhatsApp</span><span class="zh">简单留言，我们 WhatsApp 继续聊</span></h2>
+      <p class="lead" style="margin-top:18px"><span class="en">Fill in the form and tap the button. WhatsApp opens with your message ready to send. I usually reply within the same working day.</span><span class="zh">填好表格，点击按钮，WhatsApp 会自动打开并带上您的留言，按发送即可。我通常会在当天工作时间内回复。</span></p>
+      <div class="contact-list">
+        <div><small>WhatsApp</small><a href="https://wa.me/60174025892" target="_blank" rel="noopener">017-402 5892</a></div>
+        <div><small><span class="en">Email</span><span class="zh">电邮</span></small><span class="break">ent.cheong.businesscentre@gmail.com</span></div>        <div><small><span class="en">Languages</span><span class="zh">语言</span></small><span>English · 中文 · Bahasa Melayu</span></div>
+      </div>
+    </div>
+
+    <form class="form" id="enquiry-form" novalidate>
+      <div class="tabs" role="tablist" aria-label="Enquiry type">
+        <button type="button" role="tab" id="tab-quote" data-type="quote" aria-selected="true"><span class="en">Quotation</span><span class="zh">报价</span></button>
+        <button type="button" role="tab" id="tab-claim" data-type="claim" aria-selected="false"><span class="en">My policy</span><span class="zh">现有保单服务</span></button>
+        <button type="button" role="tab" id="tab-career" data-type="career" aria-selected="false"><span class="en">Career</span><span class="zh">事业机会</span></button>
+      </div>
+
+      <div class="fields">
+        <div><label for="f-name"><span class="en">Your name</span><span class="zh">您的名字</span></label><input id="f-name" autocomplete="name" data-ph-en="e.g. Jason Lim" data-ph-zh="例：林小明"><p class="err" id="err-name" hidden></p></div>
+        <div><label for="f-area"><span class="en">Area / city</span><span class="zh">所在地区</span> <span class="opt"><span class="en">(optional)</span><span class="zh">（选填）</span></span></label><input id="f-area" data-ph-en="e.g. Bukit Mertajam" data-ph-zh="例：大山脚"></div>
+
+        <!-- quotation -->
+        <div class="full" data-for="quote">
+          <span class="lbl"><span class="en">I'm interested in</span><span class="zh">我感兴趣的是</span></span>
+          <div class="chips" id="needs">
+            <label><input type="checkbox" value="medical" id="n-medical"><span class="en">Medical card</span><span class="zh">医药卡</span></label>
+            <label><input type="checkbox" value="ci" id="n-ci"><span class="en">Critical illness</span><span class="zh">重大疾病</span></label>
+            <label><input type="checkbox" value="life" id="n-life"><span class="en">Life protection</span><span class="zh">人寿保障</span></label>
+            <label><input type="checkbox" value="income" id="n-income"><span class="en">Income protection</span><span class="zh">收入保障</span></label>
+            <label><input type="checkbox" value="loan" id="n-loan"><span class="en">Loan / debt cancellation</span><span class="zh">贷款 / 债务保障</span></label>
+            <label><input type="checkbox" value="will" id="n-will"><span class="en">Will writing</span><span class="zh">遗嘱规划</span></label>
+            <label><input type="checkbox" value="planning" id="n-planning"><span class="en">Retirement / education</span><span class="zh">退休 / 教育</span></label>
+            <label><input type="checkbox" value="business" id="n-business"><span class="en">Company / employee benefits</span><span class="zh">企业 / 员工福利</span></label>
+            <label><input type="checkbox" value="review" id="n-review"><span class="en">Review my existing policies</span><span class="zh">检视现有保单</span></label>
+          </div>
+          <p class="err" id="err-needs" hidden></p>
+        </div>
+        <div data-for="quote"><label for="f-age"><span class="en">Age of person to cover</span><span class="zh">受保人年龄</span></label><input id="f-age" inputmode="numeric" data-ph-en="e.g. 35" data-ph-zh="例：35"></div>
+        <div data-for="quote"><label for="f-budget"><span class="en">Monthly budget</span><span class="zh">每月预算</span> <span class="opt"><span class="en">(optional)</span><span class="zh">（选填）</span></span></label>
+          <select id="f-budget">
+            <option value="" data-en="Not sure yet" data-zh="还不确定">Not sure yet</option>
+            <option value="Below RM200" data-en="Below RM200" data-zh="RM200 以下">Below RM200</option>
+            <option value="RM200 – RM500" data-en="RM200 – RM500" data-zh="RM200 – RM500">RM200 – RM500</option>
+            <option value="RM500 – RM1,000" data-en="RM500 – RM1,000" data-zh="RM500 – RM1,000">RM500 – RM1,000</option>
+            <option value="Above RM1,000" data-en="Above RM1,000" data-zh="RM1,000 以上">Above RM1,000</option>
+          </select>
+        </div>
+
+        <!-- existing policy (internal key "claim") -->
+        <div data-for="claim" hidden><label for="f-insurer"><span class="en">Insurer</span><span class="zh">保险公司</span></label><input id="f-insurer" data-ph-en="e.g. Great Eastern" data-ph-zh="例：Great Eastern"></div>
+        <div data-for="claim" hidden><label for="f-ctype"><span class="en">I need help with</span><span class="zh">我需要协助的是</span></label>
+          <select id="f-ctype">
+            <option value="Understanding my coverage" data-en="Understanding my coverage" data-zh="了解现有的保障">Understanding my coverage</option>
+            <option value="Updating my details / nominee" data-en="Updating my details / nominee" data-zh="更新资料 / 受益人">Updating my details / nominee</option>
+            <option value="Premium or payment" data-en="Premium or payment" data-zh="保费或付款">Premium or payment</option>
+            <option value="Claims &amp; hospitalisation" data-en="Claims &amp; hospitalisation" data-zh="理赔与住院">Claims &amp; hospitalisation</option>
+            <option value="Something else" data-en="Something else" data-zh="其他">Something else</option>
+          </select>
+        </div>
+
+        <!-- career -->
+        <div data-for="career" hidden><label for="f-cage"><span class="en">Age</span><span class="zh">年龄</span></label><input id="f-cage" inputmode="numeric" data-ph-en="e.g. 26" data-ph-zh="例：26"></div>
+        <div data-for="career" hidden><label for="f-job"><span class="en">Current occupation</span><span class="zh">目前职业</span></label><input id="f-job" data-ph-en="e.g. Accounts executive" data-ph-zh="例：会计助理"></div>
+        <div class="full" data-for="career" hidden><label for="f-mode"><span class="en">I'm looking at</span><span class="zh">我考虑的是</span></label>
+          <select id="f-mode">
+            <option value="Full-time" data-en="Full-time" data-zh="全职">Full-time</option>
+            <option value="Part-time to start" data-en="Part-time to start" data-zh="先兼职尝试">Part-time to start</option>
+            <option value="Just exploring" data-en="Just exploring" data-zh="只是先了解看看">Just exploring</option>
+          </select>
+        </div>
+
+        <div class="full"><label for="f-notes"><span class="en">Anything else I should know?</span><span class="zh">还有什么想告诉我？</span> <span class="opt"><span class="en">(optional)</span><span class="zh">（选填）</span></span></label><textarea id="f-notes" data-ph-en="A short description is enough." data-ph-zh="简单描述就可以。"></textarea></div>
+      </div>
+
+      <div class="form-foot">
+        <a class="btn btn-brass" id="send" href="https://wa.me/" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#wa"/></svg><span class="en">Continue on WhatsApp</span><span class="zh">前往 WhatsApp 发送</span></a>
+        <p class="privacy"><span class="en">Please don't include your IC number or medical reports here. I'll ask for documents only when needed, and your details are used solely to respond to your enquiry.</span><span class="zh">请勿在此填写身份证号码或医疗报告。需要文件时我会另外向您索取，您的资料只会用来回复这次询问。</span></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <img class="foot-logo" src="data:image/png;base64,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" alt="Da Maven">
+    <p><b style="color:var(--fg)">Da Maven Wealth Management Consultancy</b> · 017-402 5892</p>
+    <p class="disclaimer"><span class="en">Information on this page is general in nature and is not a substitute for reading your policy documents. Benefits, premiums and claim outcomes depend on policy terms, underwriting and the insurer's assessment. Terms and conditions apply.</span><span class="zh">本页内容仅供一般参考，不能取代保单条款。保障、保费与理赔结果须视保单条款、核保及保险公司的评估而定。附带条款与细则。</span></p>
+    <p>© 2026 Da Maven Wealth Management Consultancy</p>
+  </div>
+</footer>
+
+<a class="float-wa" id="float-wa" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+</div>
+
+<script>
+// ── Your WhatsApp number: country code + number, digits only (e.g. "60123456789").
+// Left empty, WhatsApp opens and lets the visitor choose who to send to.
+const WA_NUMBER = "60174025892";
+
+const app = document.getElementById("app");
+const form = document.getElementById("enquiry-form");
+const send = document.getElementById("send");
+let type = "quote";
+let lang = "en";
+
+const T = {
+  en: {
+    hello: "Hi! I found you through the Da Maven website.",
+    quote: "I'd like a quotation.", claim: "I have a question about my existing policy.", career: "I'm interested in a career with your team.",
+    name: "Name", area: "Area", needs: "Interested in", age: "Age to cover", budget: "Monthly budget",
+    insurer: "Insurer", ctype: "Need help with", cage: "Age", job: "Current occupation", mode: "Looking at", notes: "Notes",
+    errName: "Please add your name so I know who I'm talking to.", errNeeds: "Pick at least one so I can prepare.",
+    generic: "Hi! I found you through the Da Maven website and would like to know more.",
+    needLabels: { medical: "Medical card", ci: "Critical illness", life: "Life protection", income: "Income protection", loan: "Loan / debt cancellation", will: "Will writing", planning: "Retirement / education", business: "Company / employee benefits", review: "Review existing policies" }
+  },
+  zh: {
+    hello: "你好！我在 Da Maven 网站看到你的资料。",
+    quote: "我想索取报价。", claim: "我想询问现有保单的事。", career: "我对加入你的团队有兴趣。",
+    name: "名字", area: "地区", needs: "感兴趣", age: "受保人年龄", budget: "每月预算",
+    insurer: "保险公司", ctype: "需要协助", cage: "年龄", job: "目前职业", mode: "考虑", notes: "备注",
+    errName: "请留下您的名字，方便我称呼您。", errNeeds: "请至少选一项，方便我提前准备。",
+    generic: "你好！我在 Da Maven 网站看到你的资料，想了解更多。",
+    needLabels: { medical: "医药卡", ci: "重大疾病", life: "人寿保障", income: "收入保障", loan: "贷款 / 债务保障", will: "遗嘱规划", planning: "退休 / 教育", business: "企业 / 员工福利", review: "检视现有保单" }
+  }
+};
+
+const val = id => document.getElementById(id).value.trim();
+const optText = id => { const s = document.getElementById(id); const o = s.options[s.selectedIndex]; return o.value ? o.getAttribute("data-" + lang) : ""; };
+const waLink = text => "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
+
+function buildMessage() {
+  const t = T[lang];
+  const lines = [t.hello, t[type], ""];
+  const add = (k, v) => { if (v) lines.push("• " + t[k] + ": " + v); };
+  add("name", val("f-name"));
+  add("area", val("f-area"));
+  if (type === "quote") {
+    const needs = [...document.querySelectorAll("#needs input:checked")].map(i => t.needLabels[i.value]);
+    add("needs", needs.join(", "));
+    add("age", val("f-age"));
+    add("budget", optText("f-budget"));
+  } else if (type === "claim") {
+    add("insurer", val("f-insurer"));
+    add("ctype", optText("f-ctype"));  } else {
+    add("cage", val("f-cage"));
+    add("job", val("f-job"));
+    add("mode", optText("f-mode"));
+  }
+  add("notes", val("f-notes"));
+  return lines.join("\n");
+}
+
+function refresh() { send.href = waLink(buildMessage()); }
+
+function setType(next) {
+  type = next;
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.type === type)));
+  document.querySelectorAll("[data-for]").forEach(el => { el.hidden = el.dataset.for !== type; });
+  document.getElementById("err-needs").hidden = true;
+  refresh();
+}
+
+function setLang(next) {
+  lang = next;
+  app.dataset.lang = lang;
+  document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+  document.getElementById("lang-en").setAttribute("aria-pressed", String(lang === "en"));
+  document.getElementById("lang-zh").setAttribute("aria-pressed", String(lang === "zh"));
+  document.querySelectorAll("[data-ph-en]").forEach(el => { el.placeholder = el.getAttribute("data-ph-" + lang); });
+  document.querySelectorAll("option[data-en]").forEach(o => { o.textContent = o.getAttribute("data-" + lang); });
+  document.getElementById("float-wa").href = waLink(T[lang].generic);
+  try { localStorage.setItem("dm-lang", lang); } catch (e) {}
+  refresh();
+}
+
+function showErr(id, msg) { const e = document.getElementById(id); e.textContent = msg; e.hidden = !msg; }
+
+send.addEventListener("click", e => {
+  const t = T[lang];
+  let ok = true;
+  if (!val("f-name")) { showErr("err-name", t.errName); ok = false; } else showErr("err-name", "");
+  if (type === "quote" && !document.querySelector("#needs input:checked")) { showErr("err-needs", t.errNeeds); ok = false; } else showErr("err-needs", "");
+  if (!ok) { e.preventDefault(); return; }
+  refresh();
+});
+
+form.addEventListener("input", refresh);
+form.addEventListener("change", refresh);
+form.addEventListener("submit", e => e.preventDefault());
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => setType(b.dataset.type)));
+document.getElementById("lang-en").addEventListener("click", () => setLang("en"));
+document.getElementById("lang-zh").addEventListener("click", () => setLang("zh"));
+
+// Section buttons jump to the form with the right tab (and need) pre-selected
+document.querySelectorAll("[data-goto]").forEach(a => a.addEventListener("click", () => {
+  setType(a.dataset.goto);
+  if (a.dataset.need) { const box = document.getElementById("n-" + a.dataset.need); if (box) box.checked = true; refresh(); }
+  if (a.dataset.help) { document.getElementById("f-ctype").value = a.dataset.help; refresh(); }
+}));
+
+// Client story albums: one cover per category, tap to page through the rest
+const ALBUMS = {
+  referral: { en: "Recommended by friends", zh: "朋友推荐", photos: [
+    { src: "images/st-referral.webp", en: "A client books an appointment for a friend and her fiancé", zh: "客户为朋友和她的未婚夫预约咨询" }
+  ]},
+  feedback: { en: "What clients tell us", zh: "客户这样说", photos: [
+    { src: "images/st-review-1.png", en: "After a claim: \"1000/10, best service\"", zh: "理赔之后：「1000/10，最好的服务」" },
+    { src: "images/st-review-3.webp", en: "\"Thank you, you're really efficient\"", zh: "「谢谢你，你真的很有效率」" },
+    { src: "images/st-review-2.png", en: "\"My best agent\"", zh: "「我最好的保险顾问」" },
+    { src: "images/st-review-4.png", en: "After a policy review: thanks for the service attitude", zh: "保单检视之后：感谢你的服务态度" }
+  ]},
+  claims: { en: "Claim speed", zh: "理赔速度", photos: [
+    { src: "images/st-claim-2days.webp", en: "2 days · submitted 12 Mar 2024, paid 14 Mar 2024", zh: "2 天 · 2024年3月12日提交，3月14日赔付" },
+    { src: "images/st-claim-4days.png", en: "4 working days · submitted 7 Aug 2025, paid 13 Aug 2025", zh: "4 个工作天 · 2025年8月7日提交，8月13日赔付" }
+  ]}
+};
+const viewer = document.getElementById("viewer");
+let album = null, idx = 0, opener = null;
+function showPhoto() {
+  const a = ALBUMS[album], p = a.photos[idx];
+  const img = document.getElementById("viewer-img");
+  img.src = p.src; img.alt = p[lang];
+  document.getElementById("viewer-title").textContent = a[lang];
+  document.getElementById("viewer-count").textContent = (idx + 1) + " / " + a.photos.length;
+  document.getElementById("viewer-caption").textContent = p[lang];
+  const multi = a.photos.length > 1;
+  document.getElementById("viewer-prev").hidden = !multi;
+  document.getElementById("viewer-next").hidden = !multi;
+}
+function openAlbum(name, btn) { album = name; idx = 0; opener = btn; showPhoto(); viewer.hidden = false; document.body.style.overflow = "hidden"; document.getElementById("viewer-close").focus(); }
+function closeAlbum() { viewer.hidden = true; document.body.style.overflow = ""; if (opener) opener.focus(); }
+function step(d) { const n = ALBUMS[album].photos.length; idx = (idx + d + n) % n; showPhoto(); }
+document.querySelectorAll(".album").forEach(b => b.addEventListener("click", () => openAlbum(b.dataset.album, b)));
+document.getElementById("viewer-close").addEventListener("click", closeAlbum);
+document.getElementById("viewer-prev").addEventListener("click", () => step(-1));
+document.getElementById("viewer-next").addEventListener("click", () => step(1));
+viewer.addEventListener("click", e => { if (e.target === viewer) closeAlbum(); });
+document.addEventListener("keydown", e => {
+  if (viewer.hidden) return;
+  if (e.key === "Escape") closeAlbum();
+  else if (e.key === "ArrowLeft") step(-1);
+  else if (e.key === "ArrowRight") step(1);
+});
+let touchX = null;
+viewer.addEventListener("touchstart", e => { touchX = e.touches[0].clientX; }, { passive: true });
+viewer.addEventListener("touchend", e => { if (touchX === null) return; const dx = e.changedTouches[0].clientX - touchX; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); touchX = null; });
+
+// Header depth on scroll
+const header = document.querySelector("header");
+const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+// Count the experience numbers up once they come into view (they show their final value until then)
+const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!calm && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    io.unobserve(en.target);
+    const el = en.target, end = +el.dataset.count, suffix = el.dataset.suffix || "", t0 = performance.now(), dur = 2400;
+    const tick = now => {
+      const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }), { threshold: 0.6 });
+  document.querySelectorAll("[data-count]").forEach(el => io.observe(el));
+}
+
+let saved = "en";
+try { saved = localStorage.getItem("dm-lang") || "en"; } catch (e) {}
+setLang(saved === "zh" ? "zh" : "en");
+setType("quote");
+</script>
+</body>
+</html>
